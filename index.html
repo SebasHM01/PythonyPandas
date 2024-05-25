@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciencia de Datos y Pandas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: url('ciencias.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #ecece9f5;
+        }
+        .container {
+            width: 100%;
+            background: rgba(15, 13, 13, 0.63);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #dae719e8;
+        }
+        .section {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 20px;
+        }
+        #toTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #f01919c5; /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+        #toTopBtn:hover {
+            background-color: #251c1c3f; /* Add a dark-grey background on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="CESUN Universidad Logo">
+        <h1></h1>
+    </div>
+    <div class="container">
+        <div class="section" id="ciencia-de-datos">
+            <h2>¿Qué es ciencia de datos?</h2>
+            <p>La ciencia de datos es un campo interdisciplinario que utiliza métodos, procesos, algoritmos y sistemas científicos para extraer conocimiento y obtener insights de datos estructurados y no estructurados. Combina habilidades de diversas áreas como estadísticas, informática y análisis de datos para interpretar y tomar decisiones basadas en datos.</p>
+            
+            <h2>¿Por qué utilizar Python en ciencia de datos?</h2>
+            <p>Python es ampliamente utilizado en ciencia de datos debido a su simplicidad y legibilidad, lo que facilita el aprendizaje y la implementación. Además, cuenta con una vasta colección de bibliotecas y frameworks específicos para el análisis de datos, como NumPy, Pandas, Matplotlib y Scikit-learn, que proporcionan herramientas poderosas y eficientes para la manipulación y análisis de datos.</p>
+        </div>
+
+        <div class="section" id="pandas">
+            <h2>¿Qué es Pandas?</h2>
+            <p>Pandas es una biblioteca de software escrita para el lenguaje de programación Python para la manipulación y análisis de datos. Ofrece estructuras de datos y operaciones para manipular tablas numéricas y series temporales de manera eficiente.</p>
+            
+            <h2>¿Cómo funciona?</h2>
+            <p>Pandas funciona proporcionando dos estructuras de datos principales: Series (unidimensional) y DataFrame (bidimensional). Estas estructuras permiten manejar y manipular datos de diversas formas, como la limpieza, transformación, agregación y visualización de datos. Los DataFrames de Pandas son similares a las tablas de bases de datos o a las hojas de cálculo de Excel, facilitando la manipulación de datos tabulares.</p>
+            
+            <h2>Ventajas</h2>
+            <p>Las ventajas de utilizar Pandas incluyen:</p>
+            <ul>
+                <li>Fácil manejo de datos ausentes.</li>
+                <li>Potente capacidad de agrupación y agregación de datos.</li>
+                <li>Integración con otras bibliotecas de Python para visualización y aprendizaje automático.</li>
+                <li>Funcionalidades robustas para la manipulación y limpieza de datos.</li>
+                <li>Soporte para operaciones de entrada y salida con diferentes formatos de archivos.</li>
+            </ul>
+            
+            <h2>Cómo utilizan Pandas los científicos de datos</h2>
+            <p>Los científicos de datos utilizan Pandas para cargar, limpiar y preprocesar datos antes de aplicar técnicas de análisis o modelos de aprendizaje automático. La capacidad de Pandas para manejar grandes volúmenes de datos y realizar operaciones complejas de manera eficiente lo convierte en una herramienta esencial en el flujo de trabajo de ciencia de datos.</p>
+            
+            <h2>¿Qué otras alternativas existen similares a Pandas?</h2>
+            <p>Algunas alternativas a Pandas incluyen:</p>
+            <ul>
+                <li>Dask: Permite manejar datos más grandes que la memoria usando paralelización.</li>
+                <li>Vaex: Optimizado para trabajar con datasets grandes y ofrece operaciones rápidas.</li>
+                <li>Data.table (en R): Ofrece funcionalidades similares a Pandas pero en el lenguaje de programación R.</li>
+                <li>Apache Spark: Utilizado para análisis de big data distribuido.</li>
+            </ul>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="toTopBtn" title="Ir arriba">↑</button>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("toTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+</html>
